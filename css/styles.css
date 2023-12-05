@@ -518,14 +518,10 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     position: relative;
     display: flex;
     width: 453px;
-}
-
-.subscribe-form-field-wrapper {
-    width: 264px; 
-
+    gap: 24px;
 }
     
-.subscribe-form-field-label {
+.subscribe-form-title {
     display: block;
     color: #FFF;
     font-size: 16px;
@@ -536,7 +532,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 }
 
 .subscribe-form-input {
-    width: 100%;
+    width: 264px;
     height: 40px;
     color: #FFF;
     font-size: 12px;
@@ -554,18 +550,13 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     color: #FFF;
 }
 
-.subscribe-form-field-btn {
-    position: relative;
-    display: block;
-    width: 165px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
 .subscribe-form-submit-btn {
-    display: block;
-    width: 165px;
+    position: relative;
+    display: flex;
+    min-width: 165px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -573,7 +564,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     color: #FFF;
     background-color: #4D5AE5;
     border-radius: 4px;
-    border: 0;
+    border: none;
     padding: 8px 64px 8px 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -588,6 +579,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     top: 50%;
     transform: translateY(-50%);
     right: 24px;
+    margin-left: 16px
 }
 
 /*============ /Footer Styles ============*/
@@ -624,26 +616,33 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     left: 50%;
     transform: translate(-50%, -50%);
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     border-radius: 4px;
     background: #FCFCFC;
     padding: 72px 24px 24px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24px;
     height: 24px;
     top: 24px;
     right: 24px;
     padding: 0;
     line-height: 0;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: #E7E9FC;
     fill: #2E2F42;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -651,6 +650,11 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 .modal-close-btn:active {
     background-color: #404BBF; 
     fill: #FFFFFF;
+    border: none;
+}
+
+.madal-close-btn-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .review-form-description {
@@ -762,9 +766,10 @@ margin-bottom: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     border-radius: 2px;
+    fill: transparent;
     cursor: pointer;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .review-form-checkbox:checked 
@@ -790,6 +795,8 @@ margin-bottom: 16px;
 + .review-form-checkbox-label
 .review-form-own-checkbox-icon {
     opacity: 1;
+    border: none;
+    fill: #F4F4FD;
 }
 
 .review-form-submit-btn {
@@ -817,6 +824,6 @@ margin-bottom: 16px;
 
 .review-form-checbox-privacy {
     margin-left: 4px;
-    color: #4D5AE5;
+    color: #4d5ae5;
 }
 /*============ Modal Window Styles ============*/

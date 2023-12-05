@@ -424,26 +424,26 @@
                     </li>
                 </ul>
             </div>
-            <form class="subscribe-form">
-                <div class="subscribe-form-field-wrapper">
-                    <label class="subscribe-form-field-label" for="subscribe-email">Subscribe</label>
-                    <input class="subscribe-form-input" id="subscribe-email" name="subscribe-email" type="text" required
-                        placeholder="E-mail">
-                </div>
-                <div class="subscribe-form-field-btn">
-                    <button class="subscribe-form-submit-btn">Subscribe</button>
-                    <svg class="subscribe-form-submit-icon" width="24" height="24" aria-label="icon-send">
-                        <use href="./images/icons.svg#icon-send"></use>
-                    </svg>
-                </div>
-            </form>
+            <div class="final-page-form-content">
+                <p class="subscribe-form-title">Subscribe</p>
+                <form class="subscribe-form">
+                    <label class="subscribe-form-field-label">
+                        <input class="subscribe-form-input" name="subscribe-email" type="text" required
+                            placeholder="E-mail">
+                    </label>
+                    <button class="subscribe-form-submit-btn" type="submit">Subscribe
+                        <svg class="subscribe-form-submit-icon" width="24" height="24" aria-label="icon-send">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg></button>
+                </form>
+            </div>
         </div>
     </footer>
 
     <!-- Backdrop -->
     <div class="backdrop is-open">
         <div class="modal">
-            <button class="modal-close-btn">
+            <button class="modal-close-btn" type="button">
                 <svg class="madal-close-btn-icon" width="8" height="8" aria-label="close modal label">
                     <use href="./images/icons.svg#icon-close">
                     </use>
@@ -456,7 +456,7 @@
                     <div class="review-form-input-wrapper">
                         <input class="review-form-input" id="user-name" name="user-name" type="text"
                             pattern="[a-zA-Zа-яА-ЯіІїЇєЄ']+" title="Olha" required />
-                        <svg class="review-form-input-icon" width="18" height="18" aria-label="icon-person">
+                        <svg class="review-form-input-icon" width="18" height="24" aria-label="icon-person">
                             <use href="./images/icons.svg#icon-person"></use>
                         </svg>
                     </div>
@@ -487,11 +487,11 @@
                         placeholder="Text input"></textarea>
                 </div>
                 <div class="review-form-checkbox-wrapper">
-                    <input class="review-form-checkbox visually-hidden" id="user-privacy-policy"
-                        name="user-privacy-policy" type="checkbox" value="true" required />
-                    <label class="review-form-checkbox-label" for="user-privacy-policy">
+                    <input class="review-form-checkbox visually-hidden" id="user-privacy" name="user-privacy"
+                        type="checkbox" value="true" required />
+                    <label class="review-form-checkbox-label" for="user-privacy">
                         <span class="review-form-own-checkbox">
-                            <svg class="review-form-own-checkbox-icon" width="16" height="16"
+                            <svg class="review-form-own-checkbox-icon" width="10" height="8"
                                 aria-label="checkmark icon">
                                 <use href="./images/icons.svg#icon-click"></use>
                             </svg>
