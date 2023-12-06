@@ -748,13 +748,18 @@ margin-bottom: 16px;
 }
 
 .review-form-checkbox-label {
-    display: flex;
+    display: inline-flex;
+}
+
+.review-form-checkbox-label {
+    display: inline-flex;
     align-items: center;
     color: #8E8F99;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.04em;
+    gap: 4px;
 }
 
 .review-form-own-checkbox {
@@ -767,8 +772,12 @@ margin-bottom: 16px;
     border-radius: 2px;
     fill: transparent;
     cursor: pointer;
-    margin-right: 8px;
+    margin-right: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.style-user-accept {
+    display: inline-flex;
 }
 
 .review-form-checkbox:checked 
@@ -802,7 +811,6 @@ margin-bottom: 16px;
 
 .review-form-checbox-privacy {
     color: #4d5ae5;
-    margin-left: 4px;
 }
 
 .review-form-submit-btn {
